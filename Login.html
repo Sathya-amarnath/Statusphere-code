@@ -5,17 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <base href="/">
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    
 
     <!-- Polyfill(s) for older browsers -->
     <script src="../../Scripts/angular.min.js"></script>
-    <script src="node_modules/core-js/client/shim.min.js"></script>
-    <script src="node_modules/zone.js/dist/zone.js"></script>
-    <script src="node_modules/systemjs/dist/system.src.js"></script>
-    <script src="systemjs.config.js"></script>
-    <script>
-      System.import('main.js').catch(function(err){ console.error(err); });
-    </script>
+   
     <style>
 
         
@@ -23,11 +17,12 @@
   background-color:aqua;
 }
         #locator{
-            position: absolute; visibility: visible; left: 20px; top: 225px; height: 100px; width: 450px; 
+            position: absolute; visibility: visible; left: 20px; top: 180px; height: 100px; width: 450px; 
         }
 
         #locator1{
             position: absolute; visibility: visible; left: 750px; top: 200px; height: 300px; width: 450px; 
+            font-size:large;
             
         }
 
@@ -71,24 +66,35 @@ button#facebook {
     border-color: #2d5073;
     background-color: #3b5998;
     background-image: url(http://icons.iconarchive.com/icons/danleech/simple/512/facebook-icon.png);
+cursor: pointer;
 }
 button#twitter {
     border-color: #007aa6;
     background-color: #008cbf;
     background-image: url(https://g.twimg.com/Twitter_logo_white.png);
+cursor: pointer;
 }
 button#googleplus {
     border-color: #111;
     background-color: red;
     text-shadow: #333 -1px -1px 0;
     background-image:url(http://www.iconsdb.com/icons/preview/white/google-plus-xxl.png);
+cursor: pointer;
 }
 button#instagram {
     border-color: saddlebrown;
     background-color: saddlebrown;
     background-image:url(http://icons.iconarchive.com/icons/designbolts/free-instagram/256/Active-Instagram-3-icon.png);
+cursor: pointer;
 }
-
+#b1{
+     background-color: cornflowerblue;
+    color: white;
+padding: 14px 14px;
+    margin: 4px 0;
+border-radius: 8px;
+cursor: pointer;
+}
 
     </style>
 </head>
@@ -98,10 +104,7 @@ button#instagram {
         
         <img class="displayed" src="http://joinstatus.com/wp-content/uploads/2016/07/Statusphere-logo.png" alt="mobile logo">
     </div>   
-    <div id="h">
-        <h1> <i>  We Have High Standards   </i></h1>
-        <h1><b> WELCOME TO STATUSPHERE   </b></h1>
-    </div>
+    <center>   <h1><b>      WELCOME TO STATUSPHERE</b>           </h1>                </center>
     <div id="locator"> 
         <p> 
         Statusphere was created by social influencers that were tired of 
@@ -115,12 +118,12 @@ button#instagram {
         
     
     <div id="locator1">
-        <p> Existing Users - 
-            <button ng-click="login()">Login</button>
-        <p>
-            New to Statusphere -
-            <button ng-click="register()">Signup</button>
-        </p>
+        <b>Existing Users - </b>
+            <button id="b1" ng-click="login()">Login</button>
+        <br />
+        <b>New to Statusphere -</b>
+            <button id="b1" ng-click="register()">Signup</button>
+        
         <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--OR--</p>
         <div class="social-wrap a">
             <button id="facebook">Sign up with Facebook</button>
@@ -147,3 +150,4 @@ button#instagram {
     </script>
 </body>
 </html>
+
