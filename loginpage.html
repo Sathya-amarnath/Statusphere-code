@@ -17,22 +17,44 @@
             position: absolute;
         top: 50%;
         left: 50%;
-        margin-right: -50%;
-        transform: translate(-50%, -50%);
+        right:100%;
         
-        border: 2px solid grey;
-    border-radius: 12px;
+        margin-right: -80%;
+        transform: translate(-50%, -50%);
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    
+    padding: 20px;
 
         }
         
-
-#button{
-    position: relative;
-        
-        left: 115%;
-        margin-right: -50%;
-  transform: translate(-50%, -50%);
+input[type=text],[type=password]{
+    
+            width: 50%;
+    padding: 10px 5px;
+    margin: 16px 16px;
+    margin-left:0px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-style:normal;
+    font-size:medium;
 }
+button[type=submit]
+        {
+            
+            width: 20%;
+    background-color: cornflowerblue;
+    color: white;
+    padding: 14px 14px;
+    margin: 8px 0;
+    margin-left:125px;
+    
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+        }
 #link{
     position: relative;
         
@@ -41,48 +63,51 @@
   transform: translate(-50%, -50%);
 } 
  
-p{
-    font-style:normal;
-    font-size:x-large;
-}
+
 
     </style>
    
 </head>
 
-<body bgcolor="#AED6F1" ng-app="myangularapp" ng-controller="myangularController">
+<body ng-app="myangularapp" ng-controller="myangularController">
     
         
     
         <div class="container">
-            <p>  <b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Login Page </b>   </p>
+            
             <form name="form1">
                 <div>
-                    <table cellspacing="20">
-                        <tr>
+            
+                        
                             <div>
-                                <td>  <b> UserName:</b> </td> <td> <input type="text" name="username" ng-model="username" placeholder="username" required="" /></td>
+                                <label> UserName:  </label>
+                                <br />
+                            
+                                <input type="text" name="username" ng-model="username" placeholder="username" required="" />
                             </div>
-                        </tr>
-                        <tr>
+                    
+                    
                             <div>
-                                <td>  <b> Password:</b> </td> <td><input type="password" name="password" ng-model="password" placeholder="password" required="" /></td>
+                                  <label> Password:</label>
+                            
+                                <br /> 
+                                <input type="password" name="password" ng-model="password" placeholder="password" required="" />
                             </div>
-                        </tr>
-                    </table>
                     <br />
-                    <br />
-                    <div id="button">
+                        <div id="button">
 
-                        <button name="button" type="submit" ng-click="login()"> Login </button>
+                            <button name="button" type="submit" ng-click="login()"> Login </button>
                  
                     </div>
                     
                     <br />
+                                       
                     <div id="link">
                         <a href="forgot_password.html"> Forgot password?   </a>
                     </div>
-
+                    <label>
+                        <input data-ng-click="rememberMe()" data-ng-model="remember" name="remember" type="checkbox">   Remember Me
+                    </label>
                 </div>
             </form>
 
@@ -125,3 +150,4 @@ p{
 
 </body>
 </html>
+
