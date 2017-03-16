@@ -36,7 +36,7 @@
                     <label for="retype-password">Confirm Password:</label><br />
                     <input type="password" class="form-control" ng-model="formModel.password1" id="password1" name="password1" required="required" ng-pattern="/(?=^.{8,20}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$/" />
                     <span class="help-block" ng-show="theForm.password1.$error.required && theForm.$submitted">Password confirmation is required</span>
-                    <span class="help-block" ng-show="(theForm.password.$error.required && !theForm.password1.$error.required) || (theForm.password.$viewValue!==theForm.password1.$viewValue)"> Password Mismatch</span>
+                    <span class="help-block" ng-show="(theForm.password.$error.required && !theForm.password1.$error.required) || (theForm.password.$viewValue!==theForm.password1.$viewValue) || (!theForm.password.$error.required && theForm.password1.$error.required)"> Password Mismatch</span>
 
 
                 </div>
